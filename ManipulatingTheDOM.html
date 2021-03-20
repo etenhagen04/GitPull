@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Favorite Class</title>
+    </head>
+
+    <body>
+        <h1>What is your Favorite Food?</h1>
+
+        <form>
+            <ul>
+                <li>
+                    <input type="checkbox">
+                        <label>Pizza</label>
+                    </input>
+                </li>
+
+                <li>
+                    <input type="checkbox">
+                        <label>Taco</label>
+                    </input>
+                </li> 
+
+                <li>
+                    <input type="checkbox">
+                        <label>Pasta</label>
+                    </input>
+                </li>
+
+                <li>
+                    <input type="checkbox">
+                        <label>Burger</label>
+                    </input>
+                </li>
+
+                <li>
+                    <input type="checkbox">
+                        <label>Sandwich</label>
+                    </input>
+                </li>
+
+                <li>
+                    <input type="text" placeholder="Type your food here">
+                        <label></label>
+                    </input>
+                </li>
+
+                <button id="submitButton" type="submit">
+                    <label>Submit</label>
+                </button>        
+            </ul>
+        </form>
+
+        <script>
+            function preventSubDef(event) {
+                event.preventDefault ();
+                alert("Good Choice!");
+            }
+
+            function changeDefColors(event) {
+                event.target.style.color = "#ffffff";
+                event.target.style.backgroundcolor = "#000000";
+            }
+
+            function restoreDefColors(event) {
+                event.target.style.color = null;
+                event.target.style.backgroundcolor = null;
+            }
+
+            function changeCheckboxColor(event) {
+                event.target.style.color = "#ffffff";
+                event.target.style.backgroundcolor = "#000000";
+            }
+
+            const submitButton = document.getElementById ("submitButton");
+            submitButton.addEventListener("click", preventSubDef);
+            submitButton.addEventListener("mouseenter", changeDefColors);
+            submitButton.addEventListener("mouseleave", restoreDefColors);
+
+            const choiceCheckbox = document.getElementById (input);
+            choiceCheckbox.addEventListener("click", changeCheckboxColor);
+        </script>
+
+    </body>
+</html>
