@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Favorite Class</title>
+
+        <script>
+            function preventSubDef(event) {
+                event.preventDefault ();
+}
+
+            function changeDefColors(event) {
+                event.target.style.color = "#FFFFFF"
+                event.target.style.backgroundcolor = "#0AA000"
+            }
+
+            function restoreDefColors(event) {
+                event.target.style.color = null
+                event.target.style.backgroundcolor = null
+            }
+
+            function changeCheckboxColor(event){
+                event.target.style.color = "#FFFFFF"
+                event.target.style.backgroundcolor = "#0AA000"
+            }
+
+            const submitButton = document.getElementById ("submit");
+            submitButton.addEventListener("click", preventSubDef);
+            submitButton.addEventListener("mouseenter", changeDefColors);
+            submitButton.addEventListener("mouseleave", restoreDefColors);
+
+            const checkbox = document.getElementById (input)
+            checkbox.addEventListener("click", changeCheckboxColor)
+        </script>
+    </head>
+
+    <body>
+        <h1>What is your Favorite Food?</h1>
+
+        <form>
+            <ul>
+                <li>
+                    <input type="checkbox">
+                        <label>Pizza</label>
+                    </input>
+                </li>
+
+                <li>
+                    <input type="checkbox">
+                        <label>Taco</label>
+                    </input>
+                </li> 
+
+                <li>
+                    <input type="checkbox">
+                        <label>Pasta</label>
+                    </input>
+                </li>
+
+                <li>
+                    <input type="checkbox">
+                        <label>Burger</label>
+                    </input>
+                </li>
+
+                <li>
+                    <input type="checkbox">
+                        <label>Sandwich</label>
+                    </input>
+                </li>
+
+                <li>
+                    <input type="text" placeholder="Type your food here">
+                        <label></label>
+                    </input>
+                </li>
+
+                <button id="submitButton" type="submit">
+                    <label>Submit</label>
+                </button>        
+            </ul>
+        </form>
+    </body>
+</html>
